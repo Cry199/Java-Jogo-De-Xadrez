@@ -8,7 +8,5 @@ public class Prog {
 	{
 		ChessMath chessMath = new ChessMath();
 		UI.printBoard(chessMath.getPieces());
-		
-		System.out.println("aa");
 	}
 }
