@@ -3,7 +3,7 @@ package chess;
 import boardgame.Board;
 import boardgame.Position;
 import chess.pieces.King;
-import chess.pieces.Rock;
+import chess.pieces.Rook;
 
 public class ChessMath {
 
@@ -30,10 +30,11 @@ public class ChessMath {
 		return mat;
 	}
 	
-	private void initialSetup()
+	private void initialSetup() 
 	{
-		board.placePiece(new Rock(board, Color.WHITE), new Position(2, 1));
-		board.placePiece(new King(board, Color.BLACK), new Position(3, 2));
+		board.placePiece(new Rook(board, Color.WHITE), new Position(2, 1));
+		board.placePiece(new King(board, Color.BLACK), new Position(0, 1));
+		board.placePiece(new King(board, Color.WHITE), new Position(7, 4));
 	}
 	
 	
