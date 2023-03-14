@@ -1,1 +1,1 @@
-# Java-Jogo-De-Xadrez
+# Jogo De Xadrez
