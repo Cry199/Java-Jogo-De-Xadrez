@@ -6,29 +6,39 @@ import boardgame.Position;
 import chess.pieces.King;
 import chess.pieces.Rook;
 
-public class ChessMath {
+public class ChessMatch {
 
 	private Board board;
 	
-	public ChessMath()
+	public ChessMatch()
 	{
 		board = new Board(8,8);
 		initialSetup();
 	}
 	
-	public ChessPiece[][] getPieces()
+	//
+	
+	public ChessPiece[][] getPieces() 
 	{
 		ChessPiece[][] mat = new ChessPiece[board.getRows()][board.getColumns()];
 		
-		for (int r = 0; r < board.getRows(); r++) 
+		for (int i = 0; i < board.getRows(); i++) 
 		{
-			for (int c = 0; c < board.getColumns(); c++)
+			for (int j = 0; j < board.getColumns(); j++) 
 			{
-				mat[r][c] = (ChessPiece) board.piece(r,c);
+				mat[i][j] = (ChessPiece) board.piece(i, j);
 			}
 		}
-		
 		return mat;
+	}
+	
+	public boolean[][] possibleMoves(ChessPosition sourcePosition) 
+	{
+		Position position = sourcePosition.toPosition();
+		
+		validateSourcePosition(position);
+		
+		return board.piece(position).possibleMoves();
 	}
 	
 	public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition)
@@ -78,6 +88,7 @@ public class ChessMath {
 	{
 		board.placePiece(piece, new ChessPosition(column, row).toPosition());
 	}
+	
 	
 	private void initialSetup() 
 	{
