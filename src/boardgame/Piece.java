@@ -1,7 +1,5 @@
 package boardgame;
 
-import java.util.Iterator;
-
 public abstract class Piece {
 
 	protected Position position;	
