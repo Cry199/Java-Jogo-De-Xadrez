@@ -57,5 +57,6 @@ public class Prog {
 		}
 		UI.clearScreen();
 		UI.printMatch(chessMatch, captured);
+		sc.nextLine();
 	}
 }
