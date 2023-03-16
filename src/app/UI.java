@@ -102,7 +102,7 @@ public class UI {
 			}
 			System.out.println();
 		}
-		System.out.println("  a b c d e f g h");
+		System.out.println("  a  b  c  d  e  f  g  h");
 	}
 
 	private static void printPiece(ChessPiece piece, boolean background) 
@@ -114,7 +114,7 @@ public class UI {
 		
     	if (piece == null) 
     	{
-            System.out.print("-" + ANSI_RESET);
+            System.out.print("♜" + ANSI_RESET);
         }
         else 
         {
